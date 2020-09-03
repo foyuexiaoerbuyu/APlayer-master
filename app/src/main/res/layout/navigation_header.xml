@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_root"
+    android:layout_width="@dimen/d264_size"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/header_img"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="@dimen/d20_size"
+        android:background="@color/transparent"
+        android:paddingLeft="@dimen/d4_size"
+        android:paddingTop="@dimen/d2_size"
+        android:paddingRight="@dimen/d4_size"
+        android:paddingBottom="@dimen/d6_size"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="?attr/default_album"
+        fresco:placeholderImageScaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/header_txt"
+        android:layout_width="@dimen/d170_size"
+        android:layout_height="@dimen/d32_size"
+        android:layout_margin="@dimen/d20_size"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingLeft="@dimen/d8_size"
+        android:paddingRight="@dimen/d8_size"
+        android:text="@string/playing"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s14_size" />
+</LinearLayout>

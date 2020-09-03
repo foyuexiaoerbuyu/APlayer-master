@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_path"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_name"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/file_size"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/format"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_mime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/length"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            tools:text="123123123123123" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bitrate"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_bit_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18_size"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_rate"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/song_detail_sample_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detail_text_color"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+</LinearLayout>

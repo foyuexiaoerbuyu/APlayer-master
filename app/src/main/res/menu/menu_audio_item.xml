@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:enabled="true">
+        <!--<item android:title="@string/lrc_choose"-->
+        <!--android:id="@+id/menu_lrc"/>-->
+        <item
+            android:id="@+id/menu_edit"
+            android:title="@string/song_edit" />
+        <item
+            android:id="@+id/menu_detail"
+            android:title="@string/song_detail" />
+        <item
+            android:id="@+id/menu_collect"
+            android:title="@string/collect" />
+        <item
+            android:id="@+id/menu_add_to_playlist"
+            android:title="@string/add_to_playlist" />
+        <item
+            android:id="@+id/menu_timer"
+            android:title="@string/sleep_timer" />
+        <item
+            android:id="@+id/menu_eq"
+            android:title="@string/eq" />
+        <item
+            android:id="@+id/menu_lyric"
+            android:title="@string/lyric" />
+        <item
+            android:id="@+id/menu_speed"
+            android:title="@string/speed" />
+        <!--<item android:title="音量调节"-->
+        <!--android:id="@+id/menu_vol"/>-->
+        <item
+            android:id="@+id/menu_delete"
+            android:title="@string/delete" />
+    </group>
+</menu>

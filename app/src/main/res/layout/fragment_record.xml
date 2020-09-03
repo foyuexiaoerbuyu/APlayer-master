@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <remix.myplayer.ui.widget.AutoFitSquareFrameLayout
+        android:id="@+id/cover_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/note_bg">
+
+        <remix.myplayer.ui.widget.PagerEditText
+            android:id="@+id/edit_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="@string/write_something"
+            android:maxHeight="@dimen/d240_size"
+            android:maxLength="200"
+            android:padding="@dimen/d10_size"
+            android:textColor="#916f33"
+            android:textColorHint="#e2d6c1"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/s14_size" />
+
+        <remix.myplayer.ui.widget.PagerButton
+            android:id="@+id/sharebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/d12_size"
+            android:background="@color/transparent"
+            android:text="@string/record_share"
+            android:textColor="#b8a179"
+            android:textSize="@dimen/s14_size" />
+    </remix.myplayer.ui.widget.AutoFitSquareFrameLayout>
+
+</RelativeLayout>

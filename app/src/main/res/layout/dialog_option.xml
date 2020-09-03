@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d56_size"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/popup_image"
+            android:layout_width="@dimen/d40_size"
+            android:layout_height="@dimen/d40_size"
+            android:layout_marginLeft="@dimen/d16_size"
+            android:layout_marginRight="@dimen/d16_size"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@drawable/song_artist_empty_bg_night"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/song_artist_empty_bg_night"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/popup_title"
+            android:layout_width="@dimen/d240_size"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="?attr/text_color_primary"
+            android:textSize="@dimen/s16_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?attr/divider_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/popup_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/background_rect_ripple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d12_size">
+
+            <ImageView
+                android:id="@+id/popup_add_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/d8_size"
+                android:background="@color/transparent"
+                android:src="@drawable/pop_btn_add2list" />
+
+            <TextView
+                android:id="@+id/popup_add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/join"
+                android:textColor="?attr/text_color_secondary"
+                android:textSize="@dimen/s15_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popup_ring"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/background_rect_ripple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d12_size">
+
+            <ImageView
+                android:id="@+id/popup_ring_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/d8_size"
+                android:background="@color/transparent"
+                android:src="@drawable/pop_btn_ring" />
+
+            <TextView
+                android:id="@+id/popup_ring_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ring"
+                android:textSize="@dimen/s15_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popup_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/background_rect_ripple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d12_size">
+
+            <ImageView
+                android:id="@+id/popup_share_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/d8_size"
+                android:background="@color/transparent"
+                android:src="@drawable/pop_btn_share" />
+
+            <TextView
+                android:id="@+id/popup_share_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/share"
+                android:textSize="@dimen/s15_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popup_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/background_rect_ripple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d12_size">
+
+            <ImageView
+                android:id="@+id/popup_delete_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/d8_size"
+                android:background="@color/transparent"
+                android:src="@drawable/pop_btn_delete" />
+
+            <TextView
+                android:id="@+id/popup_delete_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textSize="@dimen/s15_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
