@@ -30,6 +30,7 @@ import remix.myplayer.theme.ThemeStore;
 import remix.myplayer.ui.adapter.holder.BaseViewHolder;
 import remix.myplayer.ui.misc.MultipleChoice;
 import remix.myplayer.ui.widget.fastcroll_recyclerview.FastScroller;
+import remix.myplayer.util.ImageUriUtil;
 import remix.myplayer.util.MusicUtil;
 import remix.myplayer.util.ToastUtil;
 
@@ -134,7 +135,9 @@ public class SongAdapter extends HeaderAdapter<Song, BaseViewHolder> implements
         holder.mName.setText(song.getShowName());
 
         //艺术家与专辑
-        holder.mOther.setText(String.format("%s-%s", song.getArtist(), song.getAlbum()));
+        holder.mOther.setText(String.format("%s%s",
+                ImageUriUtil.isArtistNameUnknownOrEmpty(song.getArtist()) ? "" : song.getArtist() + "-"
+                , ImageUriUtil.isArtistNameUnknownOrEmpty(song.getAlbum()) ? "" : song.getAlbum()));
 
         //设置按钮着色
         int tintColor = ThemeStore.getLibraryBtnColor();

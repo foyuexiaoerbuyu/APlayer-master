@@ -40,10 +40,7 @@ abstract class Notify internal constructor(internal var service: MusicService) {
 
 //      stackBuilder.editIntentAt(1)?.putExtra(EXTRA_SHOW_ANIMATION, false)
 //      stackBuilder.editIntentAt(0)?.putExtra(EXTRA_SHOW_ANIMATION, false)
-            return stackBuilder.getPendingIntent(
-                    0,
-                    PendingIntent.FLAG_UPDATE_CURRENT
-            )!!
+            return stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)!!
         }
 
     init {

@@ -19,6 +19,7 @@ import android.support.annotation.WorkerThread;
 
 import com.facebook.common.util.ByteConstants;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jaudiotagger.audio.AudioFile;
 import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.exceptions.CannotReadException;
@@ -272,17 +273,14 @@ public class MediaStoreUtil {
         final String data = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA));
         final int id = cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media._ID));
 
+        String artist = processInfo(cursor.getString(cursor.getColumnIndex(Media.ARTIST)), TYPE_ARTIST);
         Song song = new Song(
                 id,
-                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME)),
-                        TYPE_DISPLAYNAME),
-                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE)),
-                        TYPE_SONG),
-                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM)),
-                        TYPE_ALBUM),
+                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME)), TYPE_DISPLAYNAME),
+                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE)), TYPE_SONG),
+                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM)), TYPE_ALBUM),
                 cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID)),
-                processInfo(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST)),
-                        TYPE_ARTIST),
+                ImageUriUtil.isArtistNameUnknownOrEmpty(artist) ? StringUtils.EMPTY : artist,
                 cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST_ID)),
                 duration,
                 Util.getTime(duration),

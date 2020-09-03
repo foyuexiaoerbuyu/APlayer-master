@@ -128,7 +128,8 @@ class NotifyImpl(context: MusicService) : Notify(context) {
     private fun buildNotification(context: Context, remoteView: RemoteViews, remoteBigView: RemoteViews): Notification {
         val builder = NotificationCompat.Builder(context, PLAYING_NOTIFICATION_CHANNEL_ID)
         builder.setContent(remoteView)
-                .setCustomBigContentView(remoteBigView)
+                //设置大自定义通知栏
+//                .setCustomBigContentView(remoteBigView)
                 .setContentText("")
                 .setContentTitle("")
                 .setShowWhen(false)
@@ -136,7 +137,8 @@ class NotifyImpl(context: MusicService) : Notify(context) {
                 .setOngoing(service.isPlaying)
                 .setContentIntent(contentIntent)
                 .setSmallIcon(R.drawable.icon_notifbar)
-        builder.setCustomBigContentView(remoteBigView)
+        //设置大自定义通知栏
+//        builder.setCustomBigContentView(remoteBigView)
         builder.setCustomContentView(remoteView)
         return builder.build()
     }

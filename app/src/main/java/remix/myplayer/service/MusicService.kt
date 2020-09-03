@@ -7,7 +7,6 @@ import android.graphics.Bitmap
 import android.graphics.PixelFormat
 import android.media.AudioManager
 import android.media.MediaPlayer
-import android.media.session.PlaybackState
 import android.net.Uri
 import android.os.*
 import android.provider.MediaStore
@@ -1312,7 +1311,7 @@ class MusicService : BaseService(), Playback, MusicEventCallback,
         mediaSession.setMetadata(MediaMetadataCompat.Builder().build())
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             mediaSession.setPlaybackState(
-                    PlaybackStateCompat.Builder().setState(PlaybackState.STATE_NONE, 0, 1f).build())
+                    PlaybackStateCompat.Builder().setState(PlaybackStateCompat.STATE_NONE, 0, 1f).build())
         } else {
             mediaSession.setPlaybackState(PlaybackStateCompat.Builder().build())
         }

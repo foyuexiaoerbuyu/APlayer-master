@@ -7,6 +7,8 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -161,19 +163,27 @@ public class ImageUriUtil {
                 song.getTitle(), song.getAlbum(), song.getArtist());
     }
 
+    /**
+     * @return 艺术家是否为未知的或空的
+     */
     public static boolean isArtistNameUnknownOrEmpty(@Nullable String artistName) {
         if (TextUtils.isEmpty(artistName)) {
             return true;
         }
+        assert artistName != null;
         artistName = artistName.trim().toLowerCase();
         return artistName.equals("unknown") || artistName.equals("<unknown>") || artistName
                 .equals("未知艺术家");
     }
 
+    /**
+     * @return 专辑是否为未知的或空的
+     */
     public static boolean isAlbumNameUnknownOrEmpty(@Nullable String albumName) {
         if (TextUtils.isEmpty(albumName)) {
             return true;
         }
+        assert albumName != null;
         albumName = albumName.trim().toLowerCase();
         return albumName.equals("unknown") || albumName.equals("<unknown>") || albumName.equals("未知专辑");
     }
@@ -182,6 +192,7 @@ public class ImageUriUtil {
         if (TextUtils.isEmpty(songName)) {
             return true;
         }
+        assert songName != null;
         songName = songName.trim().toLowerCase();
         return songName.equals("unknown") || songName.equals("<unknown>") || songName.equals("未知歌曲");
     }
@@ -222,7 +233,7 @@ public class ImageUriUtil {
                 }
             }
             if (size != null) {
-                imageUrls.put(size, image.getText());
+                imageUrls.put(size, StringUtils.defaultString(image.getText()));
             }
         }
         return getLargestImageUrl(imageUrls);

@@ -63,12 +63,9 @@ class NotifyImpl24(context: MusicService) : Notify(context) {
         val notification = NotificationCompat.Builder(service, Notify.PLAYING_NOTIFICATION_CHANNEL_ID)
                 .setVisibility(Notification.VISIBILITY_PUBLIC)
                 .setSmallIcon(R.drawable.icon_notifbar)
-                .addAction(R.drawable.ic_skip_previous_black_24dp, service.getString(R.string.previous),
-                        buildPendingIntent(service, Command.PREV))
-                .addAction(playPauseIcon, service.getString(R.string.play_pause),
-                        buildPendingIntent(service, Command.TOGGLE))
-                .addAction(R.drawable.ic_skip_next_black_24dp, service.getString(R.string.next),
-                        buildPendingIntent(service, Command.NEXT))
+                .addAction(R.drawable.ic_skip_previous_black_24dp, service.getString(R.string.previous), buildPendingIntent(service, Command.PREV))
+                .addAction(playPauseIcon, service.getString(R.string.play_pause), buildPendingIntent(service, Command.TOGGLE))
+                .addAction(R.drawable.ic_skip_next_black_24dp, service.getString(R.string.next), buildPendingIntent(service, Command.NEXT))
                 //根据当前桌面歌词的状态判断是显示开关桌面歌词还是解锁桌面歌词
                 //当前显示了桌面歌词并且已经锁定,显示解锁的按钮
                 .addAction(if (desktopLyricLock) R.drawable.ic_lock_open_black_24dp else R.drawable.ic_desktop_lyric_black_24dp,
@@ -77,9 +74,11 @@ class NotifyImpl24(context: MusicService) : Notify(context) {
                 .setDeleteIntent(buildPendingIntent(service, Command.CLOSE_NOTIFY))
                 .setContentIntent(contentIntent)
                 .setContentTitle(song.title)
+                //设置大图标
                 .setLargeIcon(bitmap)
                 .setShowWhen(false)
                 .setOngoing(service.isPlaying)
+                .setGroupSummary(true)
                 .setPriority(PRIORITY_MAX)
                 .setContentText(song.artist + " - " + song.album)
                 .setStyle(android.support.v4.media.app.NotificationCompat.MediaStyle()
