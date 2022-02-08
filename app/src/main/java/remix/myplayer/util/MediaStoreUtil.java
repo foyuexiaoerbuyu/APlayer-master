@@ -217,6 +217,11 @@ public class MediaStoreUtil {
                             folderMap.get(entry.getKey()).size(),
                             parentPath,
                             entry.getKey());
+//                    LogUtils.i("文件夹:"+folder.toString());//Folder(name=音乐, count=7, path=/storage/emulated/0/音乐, parentId=19241)
+                    //排除360手机通话录音目录
+                    if (StringUtils.equals(folder.getName(),"Call Records")) {
+                        continue;
+                    }
                     folders.add(folder);
                 }
 
